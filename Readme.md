@@ -27,7 +27,8 @@ pytest -m <marker1> ... <markerN>
     - Bash:         `PWDEBUG=1 pytest test_<filename>.py`
     - PowerShell:
 ```
-$env:PWDEBUG=1` `pytest test_<filename>.py`
+$env:PWDEBUG=1
+pytest test_<filename>.py
 ```
 - CI:
 ```
