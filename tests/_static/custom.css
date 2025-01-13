@@ -1,0 +1,30 @@
+/* -- sidebar --------------------------------------------------------------- */
+
+div.sphinxsidebar {
+    width: 290px;
+}
+
+/* -- page layout ----------------------------------------------------------- */
+
+div.bodywrapper {
+    margin: 0 0 0 320px;
+}
+
+dl dd, dt  {
+    margin-top: 15px; /* верхний отступ блока `docstring` */
+}
+
+blockquote {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #FFEEFF;
+}
+
+.copyright {
+    text-align: right;
+    font-size: 0.8em;
+    color: #999999;
+}
+
+.copyright > a {
+    color: #999999;
+}

@@ -1,0 +1,30 @@
+# Temporary files
+__pycache__
+.pytest_cache
+__MACOSX
+.DS_Store
+
+# Environment
+*venv
+*.exe
+
+# Config
+config.local.json
+*backup*
+
+# IDE files
+.idea
+.vscode
+
+# Other files
+share
+temp
+TMP
+samples
+video
+screenshots
+Logs
+logs
+*.log
+*html
+*doctrees
