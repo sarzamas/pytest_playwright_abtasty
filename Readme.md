@@ -40,13 +40,15 @@ python -m pytest -m <marker1> ... <markerN>
 
 Документация:
    -
-   - Ссылка на требования: в папке проекта \DOC
-   - Описание тестового покрытия и тестовые сценарии: в едином файле проекта \DOC\singlehtml\index.html
+   - ссылка на требования: в папке проекта [\DOC\refs](https://github.com/sarzamas/pytest_playwright_abtasty/tree/master/DOC/refs)
+   - описание тестового покрытия и тестовые сценарии: 
+   - - в едином файле проекта \DOC\singlehtml\index.html
+   - - для интерактивного вывода в файле проекта \DOC\html\index.html
    - команда для обновления документации:
 ```
 .\make.bat singlehtml
 ```
-- - или интерактивного вывода в файле проекта \DOC\html\index.html
+- - или
 ```
 python -m sphinx .\tests .\DOC\html
 ```
