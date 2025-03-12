@@ -3,6 +3,33 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+"""
+Инициализировать Sphinx в проекте если отсутствует `conf.py`:
+```bash
+sphinx-quickstart docs/
+```
+Генерация документации с помощью Sphinx:
+ - выполнить две команды последовательно из корневой директории проекта, где находятся src/ и docs/
+
+1. Генерация файлов .rst (шаблонов документации)
+```bash
+sphinx-apidoc -o docs/ src/
+```
+Sphinx не умеет напрямую парсить исходный код
+Эта команда генерирует структуру документации, которую можно редактировать:
+  - создает .rst-файлы (ReStructuredText) на основе Python-модулей в папке src/
+  - сохраняет их в директорию docs/
+
+2. Сборка HTML-документации
+```bash
+make html
+```
+Получение документации в формате веб-страниц:
+  - преобразует .rst-файлы из папки docs/ в HTML-страницы
+  - результат сохраняется в docs/_build/html/
+"""
+
+
 import os
 import sys
 from datetime import datetime
@@ -44,6 +71,9 @@ exclude_patterns = []
 
 language = 'ru'
 
+# где искать тесты
+autodoc_mock_imports = ['pytest']
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
@@ -56,6 +86,3 @@ html_theme_options = {
     'github_user': 'sphinx-doc',
     'github_repo': 'alabaster',
 }
-
-# где искать тесты
-autodoc_mock_imports = ['pytest']
